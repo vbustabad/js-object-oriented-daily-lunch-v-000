@@ -113,10 +113,11 @@ class Customer {
             );
         }
 
-        // static byPrice()
-        // function(a, b) {
-        //     return (b.price-a.price);
-        // }.bind(this)
+        static byPrice()
+          function(a, b) {
+              return (b.price-a.price);
+            }.bind(this)
+        };
   }
 
   class Delivery {
