@@ -75,9 +75,9 @@ class Customer {
       }
 
       static totalSpent() {
-          return this.meals().sort(
+          return this.meals().reduce(
               function(a, b) {
-                  return (b.price-a.price);
+                  return (a.price + b.price);
               }.bind(this)
           );
       }
@@ -114,6 +114,11 @@ class Customer {
                 }.bind(this)
             );
         }
+
+        // Meal.byPrice()
+        // function(a, b) {
+        //     return (b.price-a.price);
+        // }.bind(this)
   }
 
   class Delivery {
