@@ -33,11 +33,7 @@ class Neighborhood {
 
       meals() {
 
-        const = this.deliveries().map(
-              function(delivery) {
-                  return delivery.meal();
-              }.bind(this)
-          );
+        const meals = this.deliveries().map(function(delivery) {return delivery.meal();}.bind(this));
         let unique = [...new Set(meals)];
         return unique;
       }
