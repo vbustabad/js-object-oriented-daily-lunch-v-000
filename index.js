@@ -102,11 +102,9 @@ class Customer {
         }
 
         customers() {
-            return this.deliveries().map(
-                function(delivery) {
-                    return delivery.customerId === this.customerId;
-                }.bind(this)
-            );
+            const meal_customers = return this.deliveries().map(function(delivery) {return delivery.customer()}.bind(this));
+
+            return [...new Set(meal_customers)];
         }
 
         neighborhood() {
