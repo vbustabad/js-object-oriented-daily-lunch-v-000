@@ -32,7 +32,7 @@ class Neighborhood {
       }
 
       meals() {
-        const meals = this.deliveries().map(function(delivery) {return delivery.meal()};
+        const meals = this.deliveries().map(function(delivery) {return delivery.meal()});
 
         return meals.filter(function(meal, index, meals)) {
           return meals.indexOf(meal) == index;
