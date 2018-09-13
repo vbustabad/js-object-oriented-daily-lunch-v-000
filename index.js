@@ -118,6 +118,7 @@ class Customer {
             function(a, b) {
                 return (b.price-a.price);
             }.bind(this)
+          }
         };
   }
 
