@@ -74,9 +74,9 @@ class Customer {
           );
       }
 
-      static totalSpent() {
+      totalSpent() {
           return this.meals().reduce(function(agg, el, i, arr) {
-            return agg += el.revenue;
+            return agg + el.revenue;
           }, 0);
       }
   }
@@ -113,7 +113,7 @@ class Customer {
             );
         }
 
-        // Meal.byPrice()
+        // static byPrice()
         // function(a, b) {
         //     return (b.price-a.price);
         // }.bind(this)
