@@ -32,11 +32,14 @@ class Neighborhood {
       }
 
       meals() {
-          return this.deliveries().unique().map(
+
+        const = this.deliveries().map(
               function(delivery) {
                   return delivery.meal();
               }.bind(this)
           );
+        let unique = [...new Set(meals)];
+        return unique;
       }
   }
 
@@ -59,7 +62,7 @@ class Customer {
       }
 
       meals() {
-          return this.deliveries().unique().map(
+          return this.deliveries().map(
               function(delivery) {
                   return delivery.meal();
               }.bind(this)
@@ -102,7 +105,7 @@ class Customer {
         }
 
         customers() {
-            return store.customers().filter(
+            return store.customers.filter(
                 function(customer) {
                     return customer.mealId === this.id;
                 }.bind(this)
