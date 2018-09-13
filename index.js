@@ -75,9 +75,9 @@ class Customer {
       }
 
       static totalSpent() {
-          return this.meals().map(
-              function(meal) {
-                  return meal.price;
+          return this.meals().sort(
+              function(a, b) {
+                  return (b.price-a.price);
               }.bind(this)
           );
       }
