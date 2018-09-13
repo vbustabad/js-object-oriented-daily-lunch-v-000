@@ -32,10 +32,11 @@ class Neighborhood {
       }
 
       meals() {
-
         const meals = this.deliveries().map(function(delivery) {return delivery.meal();}.bind(this));
-        let unique = [...new Set(meals)];
-        return unique;
+        
+        return meals.filter(function(meal, index, meals)) {
+          return meals.indexOf(meal) == index;
+        };
       }
   }
 
