@@ -104,7 +104,7 @@ class Customer {
         customers() {
             return this.deliveries().map(
                 function(delivery) {
-                    return delivery.mealId === this.id;
+                    return delivery.customerId === this.customerId;
                 }.bind(this)
             );
         }
