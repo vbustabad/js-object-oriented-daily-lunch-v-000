@@ -104,7 +104,7 @@ class Customer {
         customers() {
             return this.customers().map(
                 function(customer) {
-                    return customer.id === this.customerId;
+                    return customer.id;
                 }.bind(this)
             );
         }
