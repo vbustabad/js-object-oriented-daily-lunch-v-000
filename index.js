@@ -102,9 +102,9 @@ class Customer {
         }
 
         customers() {
-            return store.customers.filter(
+            return this.customers().map(
                 function(customer) {
-                    return customer.mealId === this.id;
+                    return customer.id === this.customerId;
                 }.bind(this)
             );
         }
